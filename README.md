@@ -1,3 +1,9 @@
+# Chemtech Project
+
+[![CI](https://github.com/Dan13681989/chemtech/actions/workflows/blank.yml/badge.svg)](https://github.com/Dan13681989/chemtech/actions/workflows/blank.yml)
+
+## Description
+This project is about...
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
