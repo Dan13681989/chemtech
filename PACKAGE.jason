@@ -1,0 +1,13 @@
+{
+  "name": "your-project-name",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest" // or "mocha", "npm run test:your-test-command", etc.
+  },
+  "devDependencies": {
+    "jest": "^27.0.0" // or any other testing framework you are using
+  }
+}
+"scripts": {
+  "test": "jest" // or "mocha" or any other testing framework you are using
+}

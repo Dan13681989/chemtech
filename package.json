@@ -2,6 +2,16 @@
   "name": "chemtech",
   "version": "1.0.0",
   "scripts": {
+    "test": "jest" // or your preferred testing framework
+  },
+  "devDependencies": {
+    "jest": "^27.0.0" // or any other testing framework you are using
+  }
+}
+{
+  "name": "chemtech",
+  "version": "1.0.0",
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ."
   },
