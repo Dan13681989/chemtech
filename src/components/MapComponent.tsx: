@@ -1,0 +1,48 @@
+'use client';
+import { useEffect, useState } from 'react';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
+
+const DefaultIcon = L.icon({
+  iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
+  iconRetinaUrl: 
+'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
+  shadowUrl: 
+'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  shadowSize: [41, 41]
+});
+
+export default function MapComponent() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+    L.Marker.prototype.options.icon = DefaultIcon;
+  }, []);
+
+  if (!isClient) return null;
+
+  return (
+    <MapContainer
+      center={[51.505, -0.09]}
+      zoom={13}
+      style={{ height: '500px', width: '100%' }}
+      className="rounded-lg border-2 border-gray-200"
+    >
+      <TileLayer
+        attribution='&copy; <a 
+href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> 
+contributors'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
+      <Marker position={[51.505, -0.09]}>
+        <Popup className="font-bold text-blue-600">
+          Chemistry Lab 1 <br /> Sample Location
+        </Popup>
+      </Marker>
+    </MapContainer>
+  );
+}
