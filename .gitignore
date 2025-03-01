@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+chemtech-backup/
+chemtech-clone/
+chemtech-repo/
