@@ -1,0 +1,6 @@
+[submodule "chemtech"]
+    path = chemtech
+    url = https://github.com/Dan13681989/chemtech.git
+[submodule "chemtech/chemtech-repo"]
+    path = chemtech/chemtech-repo
+    url = https://github.com/Dan13681989/chemtech-repo.git
